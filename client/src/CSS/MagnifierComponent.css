@@ -1,0 +1,104 @@
+
+.wrapper, #magnifying-glass-id .wrapper {
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+.handle {
+    position: absolute;
+    height: calc(var(--size) * 1.9);
+    width: calc(var(--size) * 1.9);
+    background: var(--handle-background);
+    background-size: contain;
+    filter: drop-shadow(-2px -2px 10px rgba(0, 0, 0, 0.5));
+}
+
+.magnifying-glass {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    height: var(--size);
+    width: var(--size);
+    border: solid 3px black;
+    background: radial-gradient(#f5fcfc 45%, gray);
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.magnifying-glass::after {
+    display: block;
+    position: relative;
+    content: "";
+    top: calc(2 * var(--size) / 5);
+    left: calc(2 * var(--size) / 5);
+    height: 15px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+    transform: rotate(-45deg);
+    opacity: 70%;
+}
+
+.body-clone, #magnifying-glass-id .body-clone {
+    position: absolute;
+    margin-left: 8vw;
+    padding: inherit;
+    height: 100vh;
+    width: calc(71.5vw - var(--scrollbar-width));
+    transform: scale(var(--scale));
+}
+
+#magnify, #magnifying-glass-id #magnify {
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fcc203;
+    box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 39%;
+    top: 5%;
+    height: 70px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper_txt1, #magnifying-glass-id .wrapper_txt1 {
+    display: inline;
+    position: relative;
+    left: 32.9%;
+    top: 6.5%;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.wrapper_txt2, .wrapper_txt3, .wrapper_txt4, #magnifying-glass-id .wrapper_txt2, #magnifying-glass-id .wrapper_txt3, #magnifying-glass-id .wrapper_txt4 {
+    font-size: 20px;
+    position: relative;
+    top: 6.5%;
+    width: 80%;
+    padding: 0 25px;
+    left: 6.5%;
+}
+
+#magnify:hover {
+    color: white;
+    background-color: black;
+    box-shadow: 1px 1px 5px 3px blue;
+}
+
+.wrapper_img1, #magnifying-glass-id .wrapper_img1 {
+    border: 1px solid;
+    width: auto;
+    height: 38%;
+    position: relative;
+    left: 10%;
+    top: 6.5%;
+}
+
+.wrapper_txt3, .wrapper_txt4, #magnifying-glass-id .wrapper_txt3, #magnifying-glass-id .wrapper_txt4 {
+    top: 7%;
+}

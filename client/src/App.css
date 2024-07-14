@@ -1,0 +1,18 @@
+
+:root {
+  --scale: 1;
+  --size: 200px;
+  --scrollbar-width: 36px;
+  --handle-background: url("https://www.svgrepo.com/show/263197/magnifying-glass-search.svg");
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.App {
+  overflow: hidden;
+  height: 200vh;
+  width: 98vw;
+}
